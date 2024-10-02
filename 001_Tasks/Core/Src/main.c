@@ -34,7 +34,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define DWT_CTRL (*(volatile uint32_t *) 0xE0001000)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -94,6 +94,13 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+
+  //enable the cycle counter (CYCCNT register)
+  DWT_CTRL |= (1<<0);
+
+SEGGER_SYSVIEW_Conf();
+SEGGER_SYSVIEW_Start();
+
 status = xTaskCreate(Task1_Handler, "Task_1", 200, "Message from task 1", 2, &task1_handle);
 configASSERT(status == pdPASS);
 
@@ -307,7 +314,7 @@ static void Task1_Handler(void* parameters){
 
 	while(1){
 		printf("%s\n", (char *) parameters);
-		taskYIELD();
+		//taskYIELD();
 	}
 
 
@@ -318,12 +325,12 @@ static void Task2_Handler(void* parameters)
 {
 	while(1){
 		printf("%s\n", (char *) parameters);
-		taskYIELD();
+		//taskYIELD();
 	}
 
 }
 
-
+/*
 int _write(int le, char *ptr, int len)
 
 
@@ -349,6 +356,7 @@ return len;
 
 
 }
+*/
 
 /* USER CODE END 4 */
 

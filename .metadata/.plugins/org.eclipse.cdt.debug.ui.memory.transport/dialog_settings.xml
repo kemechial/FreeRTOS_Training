@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EXPORT_DIALOG">
+		<item key="Start" value="0x20001b34"/>
+		<item key="End" value="0x20001f30"/>
+		<item key="Initial address" value="0x20001b34"/>
+		<item key="File" value="C:\Users\Lenovo\OneDrive - Ege Üniversitesi\Udemy\FreeRTOS\records\F103.SVdat"/>
+		<item key="SELECTED_EXPORTER" value="rawbinary"/>
+	</section>
+</section>
