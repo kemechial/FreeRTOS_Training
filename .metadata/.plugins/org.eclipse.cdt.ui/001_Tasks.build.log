@@ -1,10 +1,18 @@
-14:31:30 **** Build of configuration Debug for project 001_Tasks ****
+16:10:31 **** Incremental Build of configuration Debug for project 001_Tasks ****
 make -j8 all 
+arm-none-eabi-gcc "../ThirdParty/SEGGER/Recorder/segger_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/OS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/Config" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/OS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/Config" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/SEGGER" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS/include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"ThirdParty/SEGGER/Recorder/segger_uart.d" -MT"ThirdParty/SEGGER/Recorder/segger_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "ThirdParty/SEGGER/Recorder/segger_uart.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/OS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/Config" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/OS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/Config" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER/SEGGER" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/SEGGER" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"C:/Users/Lenovo/STM32CubeIDE/RTOS_Workspace/001_Tasks/ThirdParty/FreeRTOS/include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "001_Tasks.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Lenovo\STM32CubeIDE\RTOS_Workspace\001_Tasks\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="001_Tasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 001_Tasks.elf
+ 
 arm-none-eabi-size  001_Tasks.elf 
+arm-none-eabi-objdump -h -S 001_Tasks.elf  > "001_Tasks.list"
    text	   data	    bss	    dec	    hex	filename
-  27124	    112	  84960	 112196	  1b644	001_Tasks.elf
+  27296	    112	  84960	 112368	  1b6f0	001_Tasks.elf
 Finished building: default.size.stdout
  
+Finished building: 001_Tasks.list
+ 
 
-14:31:30 Build Finished. 0 errors, 0 warnings. (took 360ms)
+16:10:32 Build Finished. 0 errors, 0 warnings. (took 917ms)
 
