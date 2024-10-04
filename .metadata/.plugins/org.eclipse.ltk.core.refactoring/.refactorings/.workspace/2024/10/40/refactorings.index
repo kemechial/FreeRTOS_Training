@@ -5,3 +5,5 @@
 1727879322275	Delete resource 'STM32F103_FreeRTOS/ThirdParty/FreeRTOS/FreeRTOSConfig_x.h'
 1727879684978	Delete resource 'STM32F103_FreeRTOS/ThirdParty/FreeRTOS/FreeRTOSConfig.h'
 1727879923345	Delete resource 'STM32F103_FreeRTOS/ThirdParty/FreeRTOSConfig.h'
+1728022865074	Delete resource '003_Tasks/Debug/001_Tasks.elf'
+1728022868815	Delete resource '003_Tasks/Debug/002_Tasks.elf'
