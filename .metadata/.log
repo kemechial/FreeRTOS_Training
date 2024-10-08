@@ -10100,3 +10100,731 @@ and then try again.
 java.lang.Exception: Cannot execute this command while the target is running.\nUse the "interrupt" command to stop the target\nand then try again.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+!SESSION 2024-10-08 11:50:21.052 -----------------------------------------------
+eclipse.buildId=Version 1.16.1
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-10-08 11:51:51.770
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-10-08 11:51:51.774
+!MESSAGE Log4j2 initialized with config file C:\Users\Lenovo\STM32CubeIDE\RTOS_Workspace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-10-08 11:52:02.158
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 11:52:17.254
+!MESSAGE Indexed 'STM32F401_005_Tasks' (38 sources, 198 headers) in 3.46 sec: 18,544 declarations; 73,149 references; 9 unresolved inclusions; 230 syntax errors; 1,244 unresolved names (1.3%)
+!SESSION 2024-10-08 16:15:45.081 -----------------------------------------------
+eclipse.buildId=Version 1.16.1
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=tr_TR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-10-08 16:15:50.214
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-10-08 16:15:50.215
+!MESSAGE Log4j2 initialized with config file C:\Users\Lenovo\STM32CubeIDE\RTOS_Workspace\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-10-08 16:16:02.626
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 17:03:32.892
+!MESSAGE Project '001_Tasks' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/001_Tasks)[372]: java.lang.Exception: Project '001_Tasks' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:186)
+	at org.eclipse.core.internal.resources.Project.getDescription(Project.java:430)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.cacheNaturesIdsUsedOnCache(ConfigurationDataProvider.java:383)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.loadConfiguration(ConfigurationDataProvider.java:580)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:139)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.isNewStyleProject(CProjectDescriptionManager.java:2464)
+	at org.eclipse.cdt.core.model.CoreModel.isNewStyleProject(CoreModel.java:1457)
+	at org.eclipse.cdt.ui.newui.ManageConfigSelector.getProjects(ManageConfigSelector.java:104)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.hasManagedCdtProjectSelection(HasManagedCdtProjectSelection.java:43)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.test(HasManagedCdtProjectSelection.java:33)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationReference.changed(EvaluationReference.java:103)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:374)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.deactivate(EclipseContext.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$1(MenuManagerHideProcessor.java:144)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2024-10-08 17:03:32.897
+!MESSAGE Project '001_Tasks' is not open.
+!STACK 0
+java.lang.Exception: Project '001_Tasks' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:186)
+	at org.eclipse.core.internal.resources.Project.getDescription(Project.java:430)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.cacheNaturesIdsUsedOnCache(ConfigurationDataProvider.java:383)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.loadConfiguration(ConfigurationDataProvider.java:580)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:139)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.isNewStyleProject(CProjectDescriptionManager.java:2464)
+	at org.eclipse.cdt.core.model.CoreModel.isNewStyleProject(CoreModel.java:1457)
+	at org.eclipse.cdt.ui.newui.ManageConfigSelector.getProjects(ManageConfigSelector.java:104)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.hasManagedCdtProjectSelection(HasManagedCdtProjectSelection.java:43)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.test(HasManagedCdtProjectSelection.java:33)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationReference.changed(EvaluationReference.java:103)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:374)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.deactivate(EclipseContext.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$1(MenuManagerHideProcessor.java:144)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-10-08 17:03:32.910
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: attempt to set description for a project which does not exist or not open
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.setCurrentDescription(XmlProjectDescriptionStorage.java:382)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.setLoaddedDescriptionOnLoad(XmlProjectDescriptionStorage.java:360)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:258)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.isNewStyleProject(CProjectDescriptionManager.java:2464)
+	at org.eclipse.cdt.core.model.CoreModel.isNewStyleProject(CoreModel.java:1457)
+	at org.eclipse.cdt.ui.newui.ManageConfigSelector.getProjects(ManageConfigSelector.java:104)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.hasManagedCdtProjectSelection(HasManagedCdtProjectSelection.java:43)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.test(HasManagedCdtProjectSelection.java:33)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationReference.changed(EvaluationReference.java:103)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:374)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.deactivate(EclipseContext.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$1(MenuManagerHideProcessor.java:144)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+!SUBENTRY 1 org.eclipse.cdt.core 4 -1 2024-10-08 17:03:32.911
+!MESSAGE attempt to set description for a project which does not exist or not open
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 17:03:55.009
+!MESSAGE Project '002_Tasks' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/002_Tasks)[372]: java.lang.Exception: Project '002_Tasks' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:186)
+	at org.eclipse.core.internal.resources.Project.getDescription(Project.java:430)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.cacheNaturesIdsUsedOnCache(ConfigurationDataProvider.java:383)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.loadConfiguration(ConfigurationDataProvider.java:580)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:139)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.isNewStyleProject(CProjectDescriptionManager.java:2464)
+	at org.eclipse.cdt.core.model.CoreModel.isNewStyleProject(CoreModel.java:1457)
+	at org.eclipse.cdt.ui.newui.ManageConfigSelector.getProjects(ManageConfigSelector.java:104)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.hasManagedCdtProjectSelection(HasManagedCdtProjectSelection.java:43)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.test(HasManagedCdtProjectSelection.java:33)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationReference.changed(EvaluationReference.java:103)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:374)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.deactivate(EclipseContext.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$1(MenuManagerHideProcessor.java:144)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2024-10-08 17:03:55.010
+!MESSAGE Project '002_Tasks' is not open.
+!STACK 0
+java.lang.Exception: Project '002_Tasks' is not open.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:186)
+	at org.eclipse.core.internal.resources.Project.getDescription(Project.java:430)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.cacheNaturesIdsUsedOnCache(ConfigurationDataProvider.java:383)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider.loadConfiguration(ConfigurationDataProvider.java:580)
+	at org.eclipse.cdt.internal.core.settings.model.CConfigurationDescriptionCache.loadData(CConfigurationDescriptionCache.java:139)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescription.loadDatas(CProjectDescription.java:199)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.loadProjectDescription(XmlProjectDescriptionStorage.java:509)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:239)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.isNewStyleProject(CProjectDescriptionManager.java:2464)
+	at org.eclipse.cdt.core.model.CoreModel.isNewStyleProject(CoreModel.java:1457)
+	at org.eclipse.cdt.ui.newui.ManageConfigSelector.getProjects(ManageConfigSelector.java:104)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.hasManagedCdtProjectSelection(HasManagedCdtProjectSelection.java:43)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.test(HasManagedCdtProjectSelection.java:33)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationReference.changed(EvaluationReference.java:103)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:374)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.deactivate(EclipseContext.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$1(MenuManagerHideProcessor.java:144)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.eclipse.cdt.core 4 0 2024-10-08 17:03:55.015
+!MESSAGE Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: attempt to set description for a project which does not exist or not open
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.setCurrentDescription(XmlProjectDescriptionStorage.java:382)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.setLoaddedDescriptionOnLoad(XmlProjectDescriptionStorage.java:360)
+	at org.eclipse.cdt.internal.core.settings.model.xml.XmlProjectDescriptionStorage.getProjectDescription(XmlProjectDescriptionStorage.java:258)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescriptionInternal(CProjectDescriptionManager.java:426)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:408)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:402)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.getProjectDescription(CProjectDescriptionManager.java:395)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.isNewStyleProject(CProjectDescriptionManager.java:2464)
+	at org.eclipse.cdt.core.model.CoreModel.isNewStyleProject(CoreModel.java:1457)
+	at org.eclipse.cdt.ui.newui.ManageConfigSelector.getProjects(ManageConfigSelector.java:104)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.hasManagedCdtProjectSelection(HasManagedCdtProjectSelection.java:43)
+	at org.eclipse.cdt.internal.ui.workingsets.HasManagedCdtProjectSelection.test(HasManagedCdtProjectSelection.java:33)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationReference.changed(EvaluationReference.java:103)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:374)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.deactivate(EclipseContext.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerHideProcessor.lambda$1(MenuManagerHideProcessor.java:144)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+!SUBENTRY 1 org.eclipse.cdt.core 4 -1 2024-10-08 17:03:55.015
+!MESSAGE attempt to set description for a project which does not exist or not open
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:06:26.038
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 2.2 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2024-10-08 17:11:02.827
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "containers" is null
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY org.eclipse.cdt.debug.core.memory 4 5012 2024-10-08 17:13:41.889
+!MESSAGE Could not write to file.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Lenovo\OneDrive - Ege Üniversitesi\Udemy\FreeRTOS\records\F401_5.SVdat (Dosya başka bir işlem tarafından kullanıldığından bu işlem dosyaya erişemiyor)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.output(FileExport.java:87)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.run(FileExport.java:57)
+	at org.eclipse.cdt.debug.internal.core.memory.transport.TransportJob.run(TransportJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.debug.core.memory 4 5012 2024-10-08 17:13:41.898
+!MESSAGE Could not write to file.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Lenovo\OneDrive - Ege Üniversitesi\Udemy\FreeRTOS\records\F401_5.SVdat (Dosya başka bir işlem tarafından kullanıldığından bu işlem dosyaya erişemiyor)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.output(FileExport.java:87)
+	at org.eclipse.cdt.debug.core.memory.transport.FileExport.run(FileExport.java:57)
+	at org.eclipse.cdt.debug.internal.core.memory.transport.TransportJob.run(TransportJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui.workbench 4 0 2024-10-08 17:23:02.349
+!MESSAGE IWorkbenchSite.getShell() was called after part disposal: PartSite(id=org.eclipse.cdt.ui.editor.CEditor,pluginId=org.eclipse.cdt.ui,registeredName=C/C++ Editor,hashCode=1556810904)
+!STACK 0
+java.lang.IllegalStateException: IWorkbenchSite.getShell() was called after part disposal: PartSite(id=org.eclipse.cdt.ui.editor.CEditor,pluginId=org.eclipse.cdt.ui,registeredName=C/C++ Editor,hashCode=1556810904)
+	at org.eclipse.ui.internal.PartSite.getShell(PartSite.java:451)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$1.buttonPressed(CEditor.java:1488)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4071)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:31:39.439
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.53 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:31:59.414
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.3 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:32:34.851
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.26 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:32:54.108
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.32 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:33:15.150
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.26 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:33:53.417
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.25 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:34:27.237
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.26 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:35:04.849
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.18 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:35:39.589
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.21 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:37:05.888
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.21 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:37:22.055
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.16 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:37:53.182
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.22 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:39:30.534
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.23 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:40:19.431
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.21 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:40:39.910
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.3 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:41:14.939
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.19 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:43:03.476
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.24 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:43:28.902
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.25 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:44:04.344
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.19 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:44:44.183
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.24 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:46:43.914
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.23 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:49:01.658
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.33 sec: 15,877 declarations; 69,261 references; 1 unresolved inclusions; 201 syntax errors; 244 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 17:52:36.395
+!MESSAGE Indexed 'STM32F401_005_Tasks' (37 sources, 153 headers) in 1.12 sec: 14,901 declarations; 52,831 references; 2 unresolved inclusions; 317 syntax errors; 4,018 unresolved names (5.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 19:01:11.351
+!MESSAGE Indexed 'STM32F401_TASK005_FreeRTOS' (19 sources, 81 headers) in 0.719 sec: 4,276 declarations; 17,909 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.009%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 19:32:56.553
+!MESSAGE Indexed 'STM32F401_TASK005_FreeRTOS' (37 sources, 114 headers) in 0.816 sec: 9,467 declarations; 50,552 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0033%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 19:33:25.588
+!MESSAGE Indexed 'STM32F401_TASK005_FreeRTOS' (37 sources, 114 headers) in 0.834 sec: 9,467 declarations; 50,552 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0033%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 19:34:16.862
+!MESSAGE Indexed 'STM32F401_TASK005_FreeRTOS' (37 sources, 114 headers) in 0.868 sec: 9,467 declarations; 50,552 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0033%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 19:34:45.538
+!MESSAGE Indexed 'STM32F401_TASK005_FreeRTOS' (37 sources, 114 headers) in 0.848 sec: 9,467 declarations; 50,552 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0033%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 19:35:25.310
+!MESSAGE Indexed 'STM32F401_TASK005_FreeRTOS' (37 sources, 114 headers) in 0.793 sec: 9,467 declarations; 50,552 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0033%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-10-08 19:36:23.286
+!MESSAGE Indexed 'STM32F401_TASK005_FreeRTOS' (37 sources, 114 headers) in 0.86 sec: 9,467 declarations; 50,552 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0033%)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.017
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295.1086430599"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.018
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265.1448632587"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.018
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674.1900612282"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.018
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670.2134712199"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.019
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654.2039030113"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.019
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391.514234956"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.019
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458.1791143070"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.020
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201" for "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201.228700034"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.020
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295.1116463222"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.020
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265.717590612"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.020
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674.404472010"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.021
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670.1189413001"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.021
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654.215981531"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.021
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391.1680404072"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.021
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458.880790469"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.022
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201" for "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201.766893653"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.022
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295.691376836"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.022
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265.1597093319"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.023
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674.1712419524"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.023
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670.434217011"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.023
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654.1191059171"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.024
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391.1150757621"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.024
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458.734893054"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:43:51.025
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201" for "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201.1592177541"
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2024-10-08 19:48:29.046
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "containers" is null
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.293
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295.1086430599"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.297
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265.1448632587"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.298
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674.1900612282"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.298
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670.2134712199"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.299
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654.2039030113"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.299
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391.514234956"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.299
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458.1791143070"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.299
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201" for "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201.228700034"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.300
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295.1116463222"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.300
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265.717590612"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.300
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674.404472010"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.301
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670.1189413001"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.301
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654.215981531"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.301
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391.1680404072"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.302
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458.880790469"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.302
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201" for "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201.766893653"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.302
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.1144735915.419938295.691376836"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.302
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.64900350.1630056265.1597093319"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.303
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.1957914451.931569674.1712419524"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.303
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.610352090.1033555670.434217011"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.303
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.2053308297.441960654.1191059171"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.304
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.428580436.1968612391.1150757621"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.304
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458" for "com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.1710200195.361068458.734893054"
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2024-10-08 19:51:50.304
+!MESSAGE Missing superclass "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201" for "com.st.stm32cube.ide.mcu.debug.option.cpuclock.1819921206.1699617201.1592177541"
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2024-10-08 19:58:58.079
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException: Cannot read the array length because "containers" is null
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)

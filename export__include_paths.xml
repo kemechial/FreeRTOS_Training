@@ -3,18 +3,22 @@
   <section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
     <language id="org.eclipse.cdt.core.assembly" name="s,S">
       <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/Config</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/FreeRTOS</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/SEGGER</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/OS</includepath>
     </language>
     <language id="org.eclipse.cdt.core.gcc" name="C Source File">
-      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/SEGGER</includepath>
-      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/Config</includepath>
-      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/OS</includepath>
       <includepath>Core/Inc</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/OS</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/Config</includepath>
       <includepath workspace_path="true">/${ProjName}/ThirdParty/FreeRTOS</includepath>
-      <includepath workspace_path="true">/${ProjName}/ThirdParty/FreeRTOS/portable/GCC/ARM_CM3</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER/SEGGER</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/SEGGER</includepath>
+      <includepath workspace_path="true">/${ProjName}/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F</includepath>
       <includepath workspace_path="true">/${ProjName}/ThirdParty/FreeRTOS/include</includepath>
-      <includepath>Drivers/STM32F1xx_HAL_Driver/Inc/Legacy</includepath>
-      <includepath>Drivers/STM32F1xx_HAL_Driver/Inc</includepath>
-      <includepath>Drivers/CMSIS/Device/ST/STM32F1xx/Include</includepath>
+      <includepath>Drivers/STM32F4xx_HAL_Driver/Inc</includepath>
+      <includepath>Drivers/STM32F4xx_HAL_Driver/Inc/Legacy</includepath>
+      <includepath>Drivers/CMSIS/Device/ST/STM32F4xx/Include</includepath>
       <includepath>Drivers/CMSIS/Include</includepath>
     </language>
     <language name="Object File"/>
@@ -36,7 +40,7 @@
         <value/>
       </macro>
       <macro>
-        <name>STM32F103x8</name>
+        <name>STM32F407xx</name>
         <value/>
       </macro>
     </language>
