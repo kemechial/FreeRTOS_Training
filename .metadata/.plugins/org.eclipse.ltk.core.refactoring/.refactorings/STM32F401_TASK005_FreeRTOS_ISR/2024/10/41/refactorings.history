@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32F401_TASK005_FreeRTOS_ISR/STM32F401_TASK005_FreeRTOS.ioc&apos; to &apos;STM32F401_TASK005_FreeRTOS_ISR.ioc&apos;" description="Rename resource &apos;STM32F401_TASK005_FreeRTOS.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="STM32F401_TASK005_FreeRTOS.ioc" name="STM32F401_TASK005_FreeRTOS_ISR.ioc" stamp="1728463838661" updateReferences="true"/>
+</session>

@@ -220,13 +220,13 @@ static void Task1_Handler(void* parameters){
     char msg[30];
 
 	while(1){
-	  HAL_GPIO_TogglePin(GPIOB, LED4_Pin);
+	  HAL_GPIO_TogglePin(GPIOB, LED3_Pin);
 	  status = xTaskNotifyWait(0,0, NULL, pdMS_TO_TICKS(1000));
 	  if(status == pdTRUE){
 		  vTaskSuspendAll(); //modifying a global variable, when scheduler suspended preemption will not occur
 		  next_task_handle = task2_handle;
 		  xTaskResumeAll();
-		  HAL_GPIO_WritePin(GPIOB, LED4_Pin, GPIO_PIN_SET);
+		  HAL_GPIO_WritePin(GPIOB, LED3_Pin, GPIO_PIN_SET);
 			snprintf(msg,30,"%s\n", "Delete button task");
 			SEGGER_SYSVIEW_PrintfTarget(msg);
 		  vTaskDelete(NULL);
@@ -244,7 +244,7 @@ static void Task2_Handler(void* parameters)
 
 
 		while(1){
-		  HAL_GPIO_TogglePin(GPIOB, LED3_Pin);
+		  HAL_GPIO_TogglePin(GPIOB, LED4_Pin);
 		  status = xTaskNotifyWait(0,0, NULL, pdMS_TO_TICKS(800));
 		  if(status == pdTRUE){
 			  vTaskSuspendAll();
