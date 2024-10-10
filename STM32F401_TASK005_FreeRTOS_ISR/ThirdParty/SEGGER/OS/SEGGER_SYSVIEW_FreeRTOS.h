@@ -866,12 +866,8 @@ Notes:
                                                                             );                                            \
                                                         }
 
-
-//
-// Define INCLUDE_xTaskGetIdleTaskHandle as 1 in FreeRTOSConfig.h to allow identification of Idle state.
-//
 #if ( INCLUDE_xTaskGetIdleTaskHandle == 1 )
-  #define traceTASK_SWITCHED_IN()                   if(prvGetTCBFromHandle(NULL) == xIdleTaskHandles[0]) {              \
+  #define traceTASK_SWITCHED_IN()                   if(prvGetTCBFromHandle(NULL) == xIdleTaskHandle) {                  \
                                                       SEGGER_SYSVIEW_OnIdle();                                          \
                                                     } else {                                                            \
                                                       SEGGER_SYSVIEW_OnTaskStartExec((U32)pxCurrentTCB);                \

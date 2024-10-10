@@ -42,6 +42,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 TaskHandle_t task1_handle;
@@ -59,11 +60,13 @@ TaskHandle_t volatile next_task_handle = NULL;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 static void Task1_Handler(void*);
 static void Task2_Handler(void*);
 static void Task3_Handler(void*);
 void button_interrupt_handler(void);
+extern void SEGGER_UART_init(uint32_t);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -100,13 +103,18 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
   //enable the cycle counter (CYCCNT register)
   DWT_CTRL |= (1<<0);
 
+  SEGGER_SYSVIEW_DisableEvents(((U32)1u << 17)); //Disable Idle event
+
+  SEGGER_UART_init(230400);
+
   SEGGER_SYSVIEW_Conf();
-   SEGGER_SYSVIEW_Start();
+   //SEGGER_SYSVIEW_Start(); starting happens in segger_uart
 
    status = xTaskCreate(Task1_Handler, "Task_1_o_5", 200, NULL, 3, &task1_handle);
    configASSERT(status == pdPASS);
@@ -154,7 +162,12 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 84;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -164,15 +177,48 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief USART2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART2_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART2_Init 0 */
+
+  /* USER CODE END USART2_Init 0 */
+
+  /* USER CODE BEGIN USART2_Init 1 */
+
+  /* USER CODE END USART2_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 115200;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART2_Init 2 */
+
+  /* USER CODE END USART2_Init 2 */
+
 }
 
 /**
@@ -187,17 +233,18 @@ static void MX_GPIO_Init(void)
 /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LED3_Pin|LED4_Pin|LED5_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : PA2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
+  /*Configure GPIO pin : PC14 */
+  GPIO_InitStruct.Pin = GPIO_PIN_14;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED3_Pin LED4_Pin LED5_Pin */
   GPIO_InitStruct.Pin = LED3_Pin|LED4_Pin|LED5_Pin;
@@ -207,8 +254,8 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI2_IRQn, 10, 0);
-  HAL_NVIC_EnableIRQ(EXTI2_IRQn);
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 6, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -221,8 +268,6 @@ void button_interrupt_handler(void)
  traceISR_ENTER();
  xTaskNotifyFromISR(next_task_handle,0, eNoAction, NULL);
  traceISR_EXIT();
-
-
 
 }
 
@@ -242,9 +287,9 @@ static void Task1_Handler(void* parameters){
 		  //critical section, this function disables the interrupts with priority lower than configMAX_SYSCALL_INTERRUPT_PRIORITY.
 		  next_task_handle = task2_handle;
 		  portEXIT_CRITICAL();
-		  HAL_GPIO_WritePin(GPIOB, LED3_Pin, GPIO_PIN_SET);
-		  snprintf(msg,30,"%s\n", "Delete button task");
+		  snprintf(msg,30,"%s\n", "Delete task1");
 		  SEGGER_SYSVIEW_PrintfTarget(msg);
+		  HAL_GPIO_WritePin(GPIOB, LED3_Pin, GPIO_PIN_SET);
 		  vTaskDelete(NULL);
 	  }
 	}
@@ -266,9 +311,9 @@ static void Task2_Handler(void* parameters)
 			  portENTER_CRITICAL();// to modify a variable shared with an ISR we consider this operation as a
 			  next_task_handle = task3_handle;
 			  portEXIT_CRITICAL();
+			  snprintf(msg,30,"%s\n", "Delete task2");
+			  SEGGER_SYSVIEW_PrintfTarget(msg);
 			  HAL_GPIO_WritePin(GPIOB, LED4_Pin, GPIO_PIN_SET);
-				snprintf(msg,30,"%s\n", "Delete button task");
-				SEGGER_SYSVIEW_PrintfTarget(msg);
 			  vTaskDelete(NULL);
 		  }
 		}
@@ -287,11 +332,10 @@ static void Task3_Handler(void* parameters)
 			  portENTER_CRITICAL();// to modify a variable shared with an ISR we consider this operation as a
 			  next_task_handle = NULL;
 			  portEXIT_CRITICAL();
-
+			  snprintf(msg,30,"%s\n", "Delete task3");
+			  SEGGER_SYSVIEW_PrintfTarget(msg);
 			  HAL_GPIO_WritePin(GPIOB, LED5_Pin, GPIO_PIN_SET);
 			  vTaskDelete(task_btn_handle);
-				snprintf(msg,30,"%s\n", "Delete button task");
-				SEGGER_SYSVIEW_PrintfTarget(msg);
 			  vTaskDelete(NULL);
 		  }
 		}

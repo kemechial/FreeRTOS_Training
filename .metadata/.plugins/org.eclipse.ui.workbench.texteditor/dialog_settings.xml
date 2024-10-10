@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="BUFFER"/>
+		<item key="selection" value="DisabledEvents"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="DisabledEvents"/>
+			<item value="disable"/>
+			<item value="idle"/>
+			<item value="run"/>
+			<item value="traceTASK_NOTIFY_GIVE_FROM_ISR"/>
+			<item value="static"/>
+			<item value="SEGGER_RTT_MODE_NO_BLOCK_SKIP"/>
 			<item value="buffer"/>
+			<item value="stamp"/>
+			<item value="uart"/>
 			<item value="hook"/>
 			<item value=" configUSE_TIMERS"/>
 			<item value="timer"/>
 			<item value="configUSE_TIMERS"/>
 			<item value="xPortSysTickHandler"/>
-			<item value="SEGGER_SYSVIEW_TickCnt"/>
-			<item value="handlesü"/>
-			<item value="handles"/>
 		</list>
 		<list key="replacehistory">
 		</list>
