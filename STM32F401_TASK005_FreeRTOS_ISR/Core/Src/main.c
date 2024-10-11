@@ -109,7 +109,7 @@ int main(void)
   //enable the cycle counter (CYCCNT register)
   DWT_CTRL |= (1<<0);
 
-  SEGGER_SYSVIEW_DisableEvents(((U32)1u << 17)); //Disable Idle event
+ //SEGGER_SYSVIEW_DisableEvents(((U32)1u << 17)); //Disable Idle event
 
   SEGGER_UART_init(230400);
 
@@ -282,6 +282,8 @@ static void Task1_Handler(void* parameters){
 	while(1){
 	  HAL_GPIO_TogglePin(GPIOB, LED3_Pin);
 	  status = xTaskNotifyWait(0,0, NULL, pdMS_TO_TICKS(1000));
+	  snprintf(msg,30,"%s\n", "Toggle Led3");
+	  SEGGER_SYSVIEW_PrintfTarget(msg);
 	  if(status == pdTRUE){
 		  portENTER_CRITICAL();// to modify a variable shared with an ISR we consider this operation as a
 		  //critical section, this function disables the interrupts with priority lower than configMAX_SYSCALL_INTERRUPT_PRIORITY.
@@ -307,6 +309,8 @@ static void Task2_Handler(void* parameters)
 		while(1){
 		  HAL_GPIO_TogglePin(GPIOB, LED4_Pin);
 		  status = xTaskNotifyWait(0,0, NULL, pdMS_TO_TICKS(800));
+		  snprintf(msg,30,"%s\n", "Toggle Led4");
+		  SEGGER_SYSVIEW_PrintfTarget(msg);
 		  if(status == pdTRUE){
 			  portENTER_CRITICAL();// to modify a variable shared with an ISR we consider this operation as a
 			  next_task_handle = task3_handle;
@@ -328,6 +332,8 @@ static void Task3_Handler(void* parameters)
 		while(1){
 		  HAL_GPIO_TogglePin(GPIOB, LED5_Pin);
 		  status = xTaskNotifyWait(0,0, NULL, pdMS_TO_TICKS(400));
+		  snprintf(msg,30,"%s\n", "Toggle Led5");
+		  SEGGER_SYSVIEW_PrintfTarget(msg);
 		  if(status == pdTRUE){
 			  portENTER_CRITICAL();// to modify a variable shared with an ISR we consider this operation as a
 			  next_task_handle = NULL;

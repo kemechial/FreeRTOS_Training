@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F401_TASK005_FreeRTOS_ISR,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F401_TASK005_FreeRTOS_PWR_IDLE_HOOK
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_Tasks\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:001_Tasks\ Debug/activeLaunchTarget=null\:---
@@ -19,3 +19,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F401_RTOS/activeLaunchTarg
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F401_TASK005_FreeRTOS\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F401_TASK005_FreeRTOS\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F401_TASK005_FreeRTOS_ISR/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F401_TASK005_FreeRTOS_PWR_IDLE_HOOK/activeLaunchMode=debug

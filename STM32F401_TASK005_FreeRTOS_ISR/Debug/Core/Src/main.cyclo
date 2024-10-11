@@ -4,7 +4,7 @@
 ../Core/Src/main.c:229:13:MX_GPIO_Init	1
 ../Core/Src/main.c:266:6:button_interrupt_handler	1
 ../Core/Src/main.c:277:13:Task1_Handler	2
-../Core/Src/main.c:301:13:Task2_Handler	2
-../Core/Src/main.c:323:13:Task3_Handler	2
-../Core/Src/main.c:358:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:375:6:Error_Handler	1
+../Core/Src/main.c:303:13:Task2_Handler	2
+../Core/Src/main.c:327:13:Task3_Handler	2
+../Core/Src/main.c:364:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:381:6:Error_Handler	1

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32F401_TASK005_FreeRTOS_PWR_IDLE_HOOK/STM32F401_TASK005_FreeRTOS_ISR.ioc&apos; to &apos;STM32F401_TASK005_FreeRTOS_PWR_IDLE_HOOK.ioc&apos;" description="Rename resource &apos;STM32F401_TASK005_FreeRTOS_ISR.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="STM32F401_TASK005_FreeRTOS_ISR.ioc" name="STM32F401_TASK005_FreeRTOS_PWR_IDLE_HOOK.ioc" stamp="1728660914662" updateReferences="true"/>
+</session>
